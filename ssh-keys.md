@@ -25,3 +25,15 @@ Hostname <work-email-address>
 IdentityFile ~/.ssh/id_rsa.work
 User <>
 ```
+
+Add all the public keys to `~/.ssh/authorized_keys` by copy pasting public keys to end of file.
+
+Also, add the private keys to `ssh-agent`
+
+```
+ssh-add -K ~/.ssh/id_rsa.home
+ssh-add -K ~/.ssh/id_rsa.work
+```
+
+[1](https://serverfault.com/questions/221760/multiple-public-keys-for-one-user)
+[2](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent)
